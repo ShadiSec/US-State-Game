@@ -12,7 +12,7 @@ turtle.shape(image)
 game_on = True
 while game_on:
     # Creates a text box pop-up.
-    user_answer = screen.textinput(title=f"Guess The State {guess_brain.state_count}/50", prompt="Name a state:").title()
+    user_answer = screen.textinput(title=f"Guess The State {guess_brain.state_count}/50", prompt="Name a state:").title().strip(" ")
 
     # Stops the loop if user guesses all 50 states.
     if guess_brain.state_count == 50:
